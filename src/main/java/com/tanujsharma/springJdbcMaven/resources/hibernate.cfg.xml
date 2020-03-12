@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+        <hibernate-configuration>
+    <session-factory>
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+ 
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="hibernate.connection.username">system</property>
+        <property name="hibernate.connection.password">tanuj</property>
+        <property name="show_sql">true</property>
+ 
+        <!-- Mapping File, if there -->
+     <mapping resource= "com/tanujsharma/springJdbcMaven/resources/Customer.hbm.xml" />
+     
+    </session-factory>
+</hibernate-configuration>
